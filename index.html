@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Football Questionnaire</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS & JS -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -33,18 +33,17 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">1. Which position(s) do you coach?</label>
                     <div class="row">
-                        {% for pos in [
-                            "Quarterback","Running Back","Wide Receiver","Tight End",
-                            "Offensive Line","Defensive Line","Linebacker","Cornerback",
-                            "Safety","Kicker/Punter (Special Teams)","Long Snapper"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="positions" id="coach-pos-{{loop.index}}" value="{{pos}}">
-                                <label class="form-check-label" for="coach-pos-{{loop.index}}">{{pos}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-1" value="Quarterback"><label class="form-check-label" for="coach-pos-1">Quarterback</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-2" value="Running Back"><label class="form-check-label" for="coach-pos-2">Running Back</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-3" value="Wide Receiver"><label class="form-check-label" for="coach-pos-3">Wide Receiver</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-4" value="Tight End"><label class="form-check-label" for="coach-pos-4">Tight End</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-5" value="Offensive Line"><label class="form-check-label" for="coach-pos-5">Offensive Line</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-6" value="Defensive Line"><label class="form-check-label" for="coach-pos-6">Defensive Line</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-7" value="Linebacker"><label class="form-check-label" for="coach-pos-7">Linebacker</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-8" value="Cornerback"><label class="form-check-label" for="coach-pos-8">Cornerback</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-9" value="Safety"><label class="form-check-label" for="coach-pos-9">Safety</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-10" value="Kicker/Punter (Special Teams)"><label class="form-check-label" for="coach-pos-10">Kicker/Punter (Special Teams)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="coach-pos-11" value="Long Snapper"><label class="form-check-label" for="coach-pos-11">Long Snapper</label></div></div>
                     </div>
                 </div>
 
@@ -52,52 +51,41 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">2. Which skill areas do you specialize in coaching?</label>
                     <div class="row">
-                        {% for skill in [
-                            "Speed & Agility","Strength & Conditioning","Fundamentals (Tackling, Blocking, etc.)","Footwork",
-                            "Passing/Throwing","Catching","Route Running","Defensive Techniques",
-                            "Game IQ/Strategy","Position-Specific Skills","Injury Prevention","Mental Preparation"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="skills" id="coach-skill-{{loop.index}}" value="{{skill}}">
-                                <label class="form-check-label" for="coach-skill-{{loop.index}}">{{skill}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-1" value="Speed & Agility"><label class="form-check-label" for="coach-skill-1">Speed & Agility</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-2" value="Strength & Conditioning"><label class="form-check-label" for="coach-skill-2">Strength & Conditioning</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-3" value="Fundamentals (Tackling, Blocking, etc.)"><label class="form-check-label" for="coach-skill-3">Fundamentals (Tackling, Blocking, etc.)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-4" value="Footwork"><label class="form-check-label" for="coach-skill-4">Footwork</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-5" value="Passing/Throwing"><label class="form-check-label" for="coach-skill-5">Passing/Throwing</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-6" value="Catching"><label class="form-check-label" for="coach-skill-6">Catching</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-7" value="Route Running"><label class="form-check-label" for="coach-skill-7">Route Running</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-8" value="Defensive Techniques"><label class="form-check-label" for="coach-skill-8">Defensive Techniques</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-9" value="Game IQ/Strategy"><label class="form-check-label" for="coach-skill-9">Game IQ/Strategy</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-10" value="Position-Specific Skills"><label class="form-check-label" for="coach-skill-10">Position-Specific Skills</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-11" value="Injury Prevention"><label class="form-check-label" for="coach-skill-11">Injury Prevention</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="coach-skill-12" value="Mental Preparation"><label class="form-check-label" for="coach-skill-12">Mental Preparation</label></div></div>
                     </div>
                 </div>
 
                 <!-- 3. Coaching style (single) -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">3. How would you describe your coaching style?</label>
-                    {% for style in [
-                        "Supportive and encouraging",
-                        "Motivational and challenging",
-                        "Detailed and technical instruction",
-                        "Structured and disciplined",
-                        "Flexible and adaptive"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="coaching_style" id="coach-style-{{loop.index}}" value="{{style}}" required>
-                        <label class="form-check-label" for="coach-style-{{loop.index}}">{{style}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="coach-style-1" value="Supportive and encouraging" required><label class="form-check-label" for="coach-style-1">Supportive and encouraging</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="coach-style-2" value="Motivational and challenging" required><label class="form-check-label" for="coach-style-2">Motivational and challenging</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="coach-style-3" value="Detailed and technical instruction" required><label class="form-check-label" for="coach-style-3">Detailed and technical instruction</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="coach-style-4" value="Structured and disciplined" required><label class="form-check-label" for="coach-style-4">Structured and disciplined</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="coach-style-5" value="Flexible and adaptive" required><label class="form-check-label" for="coach-style-5">Flexible and adaptive</label></div>
                 </div>
 
                 <!-- 4. Age groups -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">4. Which age group(s) do you coach?</label>
                     <div class="row">
-                        {% for age in [
-                            "Under 10","10–12","13–15","16–18","19–22","23 and older"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-{{loop.index}}" value="{{age}}">
-                                <label class="form-check-label" for="coach-age-{{loop.index}}">{{age}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-1" value="Under 10"><label class="form-check-label" for="coach-age-1">Under 10</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-2" value="10–12"><label class="form-check-label" for="coach-age-2">10–12</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-3" value="13–15"><label class="form-check-label" for="coach-age-3">13–15</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-4" value="16–18"><label class="form-check-label" for="coach-age-4">16–18</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-5" value="19–22"><label class="form-check-label" for="coach-age-5">19–22</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-6" value="23 and older"><label class="form-check-label" for="coach-age-6">23 and older</label></div></div>
                     </div>
                 </div>
 
@@ -105,17 +93,11 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">5. Which player experience level(s) do you coach?</label>
                     <div class="row">
-                        {% for level in [
-                            "Beginner (new to the sport)","Recreational (casual/league play)","School/Club Team",
-                            "Varsity/College","Competitive/Elite"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="experience_levels" id="coach-level-{{loop.index}}" value="{{level}}">
-                                <label class="form-check-label" for="coach-level-{{loop.index}}">{{level}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="experience_levels" id="coach-level-1" value="Beginner (new to the sport)"><label class="form-check-label" for="coach-level-1">Beginner (new to the sport)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="experience_levels" id="coach-level-2" value="Recreational (casual/league play)"><label class="form-check-label" for="coach-level-2">Recreational (casual/league play)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="experience_levels" id="coach-level-3" value="School/Club Team"><label class="form-check-label" for="coach-level-3">School/Club Team</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="experience_levels" id="coach-level-4" value="Varsity/College"><label class="form-check-label" for="coach-level-4">Varsity/College</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="experience_levels" id="coach-level-5" value="Competitive/Elite"><label class="form-check-label" for="coach-level-5">Competitive/Elite</label></div></div>
                     </div>
                 </div>
 
@@ -123,18 +105,13 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">6. What coaching outcomes do you help athletes achieve?</label>
                     <div class="row">
-                        {% for outcome in [
-                            "Improve basic skills","Prepare for tryouts","Get recruited for college",
-                            "Enhance physical fitness","Recover from injury","Build confidence",
-                            "Compete at a higher level"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-{{loop.index}}" value="{{outcome}}">
-                                <label class="form-check-label" for="coach-outcome-{{loop.index}}">{{outcome}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-1" value="Improve basic skills"><label class="form-check-label" for="coach-outcome-1">Improve basic skills</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-2" value="Prepare for tryouts"><label class="form-check-label" for="coach-outcome-2">Prepare for tryouts</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-3" value="Get recruited for college"><label class="form-check-label" for="coach-outcome-3">Get recruited for college</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-4" value="Enhance physical fitness"><label class="form-check-label" for="coach-outcome-4">Enhance physical fitness</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-5" value="Recover from injury"><label class="form-check-label" for="coach-outcome-5">Recover from injury</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-6" value="Build confidence"><label class="form-check-label" for="coach-outcome-6">Build confidence</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-7" value="Compete at a higher level"><label class="form-check-label" for="coach-outcome-7">Compete at a higher level</label></div></div>
                         <div class="col-md-4">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-other">
@@ -149,59 +126,37 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">7. Do you offer individual or group/team coaching?</label>
                     <div class="row">
-                        {% for ctype in [
-                            "Individual (one-on-one)","Small group","Full team"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="coaching_types" id="coach-ctype-{{loop.index}}" value="{{ctype}}">
-                                <label class="form-check-label" for="coach-ctype-{{loop.index}}">{{ctype}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="coaching_types" id="coach-ctype-1" value="Individual (one-on-one)"><label class="form-check-label" for="coach-ctype-1">Individual (one-on-one)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="coaching_types" id="coach-ctype-2" value="Small group"><label class="form-check-label" for="coach-ctype-2">Small group</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="coaching_types" id="coach-ctype-3" value="Full team"><label class="form-check-label" for="coach-ctype-3">Full team</label></div></div>
                     </div>
                 </div>
 
                 <!-- 8. Travel distance -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">8. How far are you willing to travel for in-person sessions?</label>
-                    {% for dist in [
-                        "Up to 10 miles","Up to 25 miles","Up to 50 miles","Local only"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="travel_distance" id="coach-dist-{{loop.index}}" value="{{dist}}" required>
-                        <label class="form-check-label" for="coach-dist-{{loop.index}}">{{dist}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_distance" id="coach-dist-1" value="Up to 10 miles" required><label class="form-check-label" for="coach-dist-1">Up to 10 miles</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_distance" id="coach-dist-2" value="Up to 25 miles" required><label class="form-check-label" for="coach-dist-2">Up to 25 miles</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_distance" id="coach-dist-3" value="Up to 50 miles" required><label class="form-check-label" for="coach-dist-3">Up to 50 miles</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_distance" id="coach-dist-4" value="Local only" required><label class="form-check-label" for="coach-dist-4">Local only</label></div>
                 </div>
 
                 <!-- 9. Price range -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">9. What is your typical price range per session?</label>
-                    {% for price in [
-                        "Under $30","$30–$60","$61–$100","Over $100"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="price_range" id="coach-price-{{loop.index}}" value="{{price}}" required>
-                        <label class="form-check-label" for="coach-price-{{loop.index}}">{{price}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="coach-price-1" value="Under $30" required><label class="form-check-label" for="coach-price-1">Under $30</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="coach-price-2" value="$30–$60" required><label class="form-check-label" for="coach-price-2">$30–$60</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="coach-price-3" value="$61–$100" required><label class="form-check-label" for="coach-price-3">$61–$100</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="coach-price-4" value="Over $100" required><label class="form-check-label" for="coach-price-4">Over $100</label></div>
                 </div>
 
                 <!-- 10. Coaching format -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">10. What coaching format(s) do you offer?</label>
                     <div class="row">
-                        {% for fmt in [
-                            "In-person","Online (virtual)","Hybrid (both in-person and online)"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="coaching_formats" id="coach-fmt-{{loop.index}}" value="{{fmt}}">
-                                <label class="form-check-label" for="coach-fmt-{{loop.index}}">{{fmt}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="coaching_formats" id="coach-fmt-1" value="In-person"><label class="form-check-label" for="coach-fmt-1">In-person</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="coaching_formats" id="coach-fmt-2" value="Online (virtual)"><label class="form-check-label" for="coach-fmt-2">Online (virtual)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="coaching_formats" id="coach-fmt-3" value="Hybrid (both in-person and online)"><label class="form-check-label" for="coach-fmt-3">Hybrid (both in-person and online)</label></div></div>
                     </div>
                 </div>
 
@@ -209,17 +164,12 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">11. Do you hold current safety certifications? (Select all that apply)</label>
                     <div class="row">
-                        {% for cert in [
-                            "CPR Certification","First Aid Certification","USA Football Heads Up Certification",
-                            "Concussion Protocol Training","Youth Protection Training","None of the above"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-{{loop.index}}" value="{{cert}}">
-                                <label class="form-check-label" for="coach-cert-{{loop.index}}">{{cert}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-1" value="CPR Certification"><label class="form-check-label" for="coach-cert-1">CPR Certification</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-2" value="First Aid Certification"><label class="form-check-label" for="coach-cert-2">First Aid Certification</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-3" value="USA Football Heads Up Certification"><label class="form-check-label" for="coach-cert-3">USA Football Heads Up Certification</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-4" value="Concussion Protocol Training"><label class="form-check-label" for="coach-cert-4">Concussion Protocol Training</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-5" value="Youth Protection Training"><label class="form-check-label" for="coach-cert-5">Youth Protection Training</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-6" value="None of the above"><label class="form-check-label" for="coach-cert-6">None of the above</label></div></div>
                     </div>
                 </div>
 
@@ -227,28 +177,64 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">12. In which state(s) do you provide coaching services? (Select all that apply)</label>
                     <div class="row">
-                        {% set states = [
-                            "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
-                            "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
-                            "Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota",
-                            "Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey",
-                            "New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon",
-                            "Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas",
-                            "Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming","Washington D.C."
-                        ] %}
-                        {% for state in states %}
-                        <div class="col-md-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="states" id="coach-state-{{loop.index}}" value="{{state}}">
-                                <label class="form-check-label" for="coach-state-{{loop.index}}">{{state}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <!-- States list chunked into rows of 4 for responsiveness -->
+                        <!-- You can add or remove columns as needed based on your UI preference -->
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-1" value="Alabama"><label class="form-check-label" for="coach-state-1">Alabama</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-2" value="Alaska"><label class="form-check-label" for="coach-state-2">Alaska</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-3" value="Arizona"><label class="form-check-label" for="coach-state-3">Arizona</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-4" value="Arkansas"><label class="form-check-label" for="coach-state-4">Arkansas</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-5" value="California"><label class="form-check-label" for="coach-state-5">California</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-6" value="Colorado"><label class="form-check-label" for="coach-state-6">Colorado</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-7" value="Connecticut"><label class="form-check-label" for="coach-state-7">Connecticut</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-8" value="Delaware"><label class="form-check-label" for="coach-state-8">Delaware</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-9" value="Florida"><label class="form-check-label" for="coach-state-9">Florida</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-10" value="Georgia"><label class="form-check-label" for="coach-state-10">Georgia</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-11" value="Hawaii"><label class="form-check-label" for="coach-state-11">Hawaii</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-12" value="Idaho"><label class="form-check-label" for="coach-state-12">Idaho</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-13" value="Illinois"><label class="form-check-label" for="coach-state-13">Illinois</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-14" value="Indiana"><label class="form-check-label" for="coach-state-14">Indiana</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-15" value="Iowa"><label class="form-check-label" for="coach-state-15">Iowa</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-16" value="Kansas"><label class="form-check-label" for="coach-state-16">Kansas</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-17" value="Kentucky"><label class="form-check-label" for="coach-state-17">Kentucky</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-18" value="Louisiana"><label class="form-check-label" for="coach-state-18">Louisiana</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-19" value="Maine"><label class="form-check-label" for="coach-state-19">Maine</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-20" value="Maryland"><label class="form-check-label" for="coach-state-20">Maryland</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-21" value="Massachusetts"><label class="form-check-label" for="coach-state-21">Massachusetts</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-22" value="Michigan"><label class="form-check-label" for="coach-state-22">Michigan</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-23" value="Minnesota"><label class="form-check-label" for="coach-state-23">Minnesota</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-24" value="Mississippi"><label class="form-check-label" for="coach-state-24">Mississippi</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-25" value="Missouri"><label class="form-check-label" for="coach-state-25">Missouri</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-26" value="Montana"><label class="form-check-label" for="coach-state-26">Montana</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-27" value="Nebraska"><label class="form-check-label" for="coach-state-27">Nebraska</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-28" value="Nevada"><label class="form-check-label" for="coach-state-28">Nevada</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-29" value="New Hampshire"><label class="form-check-label" for="coach-state-29">New Hampshire</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-30" value="New Jersey"><label class="form-check-label" for="coach-state-30">New Jersey</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-31" value="New Mexico"><label class="form-check-label" for="coach-state-31">New Mexico</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-32" value="New York"><label class="form-check-label" for="coach-state-32">New York</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-33" value="North Carolina"><label class="form-check-label" for="coach-state-33">North Carolina</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-34" value="North Dakota"><label class="form-check-label" for="coach-state-34">North Dakota</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-35" value="Ohio"><label class="form-check-label" for="coach-state-35">Ohio</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-36" value="Oklahoma"><label class="form-check-label" for="coach-state-36">Oklahoma</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-37" value="Oregon"><label class="form-check-label" for="coach-state-37">Oregon</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-38" value="Pennsylvania"><label class="form-check-label" for="coach-state-38">Pennsylvania</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-39" value="Rhode Island"><label class="form-check-label" for="coach-state-39">Rhode Island</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-40" value="South Carolina"><label class="form-check-label" for="coach-state-40">South Carolina</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-41" value="South Dakota"><label class="form-check-label" for="coach-state-41">South Dakota</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-42" value="Tennessee"><label class="form-check-label" for="coach-state-42">Tennessee</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-43" value="Texas"><label class="form-check-label" for="coach-state-43">Texas</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-44" value="Utah"><label class="form-check-label" for="coach-state-44">Utah</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-45" value="Vermont"><label class="form-check-label" for="coach-state-45">Vermont</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-46" value="Virginia"><label class="form-check-label" for="coach-state-46">Virginia</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-47" value="Washington"><label class="form-check-label" for="coach-state-47">Washington</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-48" value="West Virginia"><label class="form-check-label" for="coach-state-48">West Virginia</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-49" value="Wisconsin"><label class="form-check-label" for="coach-state-49">Wisconsin</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-50" value="Wyoming"><label class="form-check-label" for="coach-state-50">Wyoming</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="coach-state-51" value="Washington D.C."><label class="form-check-label" for="coach-state-51">Washington D.C.</label></div></div>
                     </div>
                 </div>
 
                 <input type="hidden" name="form_type" value="coach">
-                <button type="submit" class="btn btn-primary mt-3">Submit Coach Form</button>
+                <button type="button" class="btn btn-primary mt-3" onclick="showThankYou('coachFormResult','coachForm')">Submit Coach Form</button>
                 <div id="coachFormResult" class="mt-4"></div>
             </form>
 
@@ -263,18 +249,17 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">1. Which position(s) do you want coaching for?</label>
                     <div class="row">
-                        {% for pos in [
-                            "Quarterback","Running Back","Wide Receiver","Tight End",
-                            "Offensive Line","Defensive Line","Linebacker","Cornerback",
-                            "Safety","Kicker/Punter (Special Teams)","Long Snapper"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="positions" id="player-pos-{{loop.index}}" value="{{pos}}">
-                                <label class="form-check-label" for="player-pos-{{loop.index}}">{{pos}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-1" value="Quarterback"><label class="form-check-label" for="player-pos-1">Quarterback</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-2" value="Running Back"><label class="form-check-label" for="player-pos-2">Running Back</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-3" value="Wide Receiver"><label class="form-check-label" for="player-pos-3">Wide Receiver</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-4" value="Tight End"><label class="form-check-label" for="player-pos-4">Tight End</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-5" value="Offensive Line"><label class="form-check-label" for="player-pos-5">Offensive Line</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-6" value="Defensive Line"><label class="form-check-label" for="player-pos-6">Defensive Line</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-7" value="Linebacker"><label class="form-check-label" for="player-pos-7">Linebacker</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-8" value="Cornerback"><label class="form-check-label" for="player-pos-8">Cornerback</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-9" value="Safety"><label class="form-check-label" for="player-pos-9">Safety</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-10" value="Kicker/Punter (Special Teams)"><label class="form-check-label" for="player-pos-10">Kicker/Punter (Special Teams)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="positions" id="player-pos-11" value="Long Snapper"><label class="form-check-label" for="player-pos-11">Long Snapper</label></div></div>
                     </div>
                 </div>
 
@@ -282,82 +267,64 @@
                 <div class="mb-3">
                     <label class="form-label fw-bold">2. Which skill areas do you want to focus on?</label>
                     <div class="row">
-                        {% for skill in [
-                            "Speed & Agility","Strength & Conditioning","Fundamentals (Tackling, Blocking, etc.)","Footwork",
-                            "Passing/Throwing","Catching","Route Running","Defensive Techniques",
-                            "Game IQ/Strategy","Position-Specific Skills","Injury Prevention","Mental Preparation"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="skills" id="player-skill-{{loop.index}}" value="{{skill}}">
-                                <label class="form-check-label" for="player-skill-{{loop.index}}">{{skill}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-1" value="Speed & Agility"><label class="form-check-label" for="player-skill-1">Speed & Agility</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-2" value="Strength & Conditioning"><label class="form-check-label" for="player-skill-2">Strength & Conditioning</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-3" value="Fundamentals (Tackling, Blocking, etc.)"><label class="form-check-label" for="player-skill-3">Fundamentals (Tackling, Blocking, etc.)</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-4" value="Footwork"><label class="form-check-label" for="player-skill-4">Footwork</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-5" value="Passing/Throwing"><label class="form-check-label" for="player-skill-5">Passing/Throwing</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-6" value="Catching"><label class="form-check-label" for="player-skill-6">Catching</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-7" value="Route Running"><label class="form-check-label" for="player-skill-7">Route Running</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-8" value="Defensive Techniques"><label class="form-check-label" for="player-skill-8">Defensive Techniques</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-9" value="Game IQ/Strategy"><label class="form-check-label" for="player-skill-9">Game IQ/Strategy</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-10" value="Position-Specific Skills"><label class="form-check-label" for="player-skill-10">Position-Specific Skills</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-11" value="Injury Prevention"><label class="form-check-label" for="player-skill-11">Injury Prevention</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="skills" id="player-skill-12" value="Mental Preparation"><label class="form-check-label" for="player-skill-12">Mental Preparation</label></div></div>
                     </div>
                 </div>
 
                 <!-- 3. Coaching style (single) -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">3. What coaching style works best for you?</label>
-                    {% for style in [
-                        "Supportive and encouraging",
-                        "Motivational and challenging",
-                        "Detailed and technical instruction",
-                        "Structured and disciplined",
-                        "Flexible and adaptive",
-                        "Not sure"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="coaching_style" id="player-style-{{loop.index}}" value="{{style}}" required>
-                        <label class="form-check-label" for="player-style-{{loop.index}}">{{style}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="player-style-1" value="Supportive and encouraging" required><label class="form-check-label" for="player-style-1">Supportive and encouraging</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="player-style-2" value="Motivational and challenging" required><label class="form-check-label" for="player-style-2">Motivational and challenging</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="player-style-3" value="Detailed and technical instruction" required><label class="form-check-label" for="player-style-3">Detailed and technical instruction</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="player-style-4" value="Structured and disciplined" required><label class="form-check-label" for="player-style-4">Structured and disciplined</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="player-style-5" value="Flexible and adaptive" required><label class="form-check-label" for="player-style-5">Flexible and adaptive</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_style" id="player-style-6" value="Not sure" required><label class="form-check-label" for="player-style-6">Not sure</label></div>
                 </div>
 
                 <!-- 4. Age group -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">4. What is your age group?</label>
-                    {% for age in [
-                        "Under 10","10–12","13–15","16–18","19–22","23 and older"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="age_group" id="player-age-{{loop.index}}" value="{{age}}" required>
-                        <label class="form-check-label" for="player-age-{{loop.index}}">{{age}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="age_group" id="player-age-1" value="Under 10" required><label class="form-check-label" for="player-age-1">Under 10</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="age_group" id="player-age-2" value="10–12" required><label class="form-check-label" for="player-age-2">10–12</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="age_group" id="player-age-3" value="13–15" required><label class="form-check-label" for="player-age-3">13–15</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="age_group" id="player-age-4" value="16–18" required><label class="form-check-label" for="player-age-4">16–18</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="age_group" id="player-age-5" value="19–22" required><label class="form-check-label" for="player-age-5">19–22</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="age_group" id="player-age-6" value="23 and older" required><label class="form-check-label" for="player-age-6">23 and older</label></div>
                 </div>
 
                 <!-- 5. Experience level -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">5. What is your current experience level in football?</label>
-                    {% for level in [
-                        "Beginner (new to the sport)","Recreational (casual/league play)","School/Club Team",
-                        "Varsity/College","Competitive/Elite"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="experience_level" id="player-level-{{loop.index}}" value="{{level}}" required>
-                        <label class="form-check-label" for="player-level-{{loop.index}}">{{level}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="experience_level" id="player-level-1" value="Beginner (new to the sport)" required><label class="form-check-label" for="player-level-1">Beginner (new to the sport)</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="experience_level" id="player-level-2" value="Recreational (casual/league play)" required><label class="form-check-label" for="player-level-2">Recreational (casual/league play)</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="experience_level" id="player-level-3" value="School/Club Team" required><label class="form-check-label" for="player-level-3">School/Club Team</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="experience_level" id="player-level-4" value="Varsity/College" required><label class="form-check-label" for="player-level-4">Varsity/College</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="experience_level" id="player-level-5" value="Competitive/Elite" required><label class="form-check-label" for="player-level-5">Competitive/Elite</label></div>
                 </div>
 
                 <!-- 6. Goals -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">6. What are your main goals for coaching?</label>
                     <div class="row">
-                        {% for goal in [
-                            "Improve basic skills","Prepare for tryouts","Get recruited for college",
-                            "Enhance physical fitness","Recover from injury","Build confidence",
-                            "Compete at a higher level"
-                        ] %}
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="goals" id="player-goal-{{loop.index}}" value="{{goal}}">
-                                <label class="form-check-label" for="player-goal-{{loop.index}}">{{goal}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="goals" id="player-goal-1" value="Improve basic skills"><label class="form-check-label" for="player-goal-1">Improve basic skills</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="goals" id="player-goal-2" value="Prepare for tryouts"><label class="form-check-label" for="player-goal-2">Prepare for tryouts</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="goals" id="player-goal-3" value="Get recruited for college"><label class="form-check-label" for="player-goal-3">Get recruited for college</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="goals" id="player-goal-4" value="Enhance physical fitness"><label class="form-check-label" for="player-goal-4">Enhance physical fitness</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="goals" id="player-goal-5" value="Recover from injury"><label class="form-check-label" for="player-goal-5">Recover from injury</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="goals" id="player-goal-6" value="Build confidence"><label class="form-check-label" for="player-goal-6">Build confidence</label></div></div>
+                        <div class="col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" name="goals" id="player-goal-7" value="Compete at a higher level"><label class="form-check-label" for="player-goal-7">Compete at a higher level</label></div></div>
                         <div class="col-md-4">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="goals" id="player-goal-other">
@@ -371,94 +338,106 @@
                 <!-- 7. Coaching type -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">7. Are you looking for individual or group/team coaching?</label>
-                    {% for ctype in [
-                        "Individual (one-on-one)","Small group","Full team"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="coaching_type" id="player-ctype-{{loop.index}}" value="{{ctype}}" required>
-                        <label class="form-check-label" for="player-ctype-{{loop.index}}">{{ctype}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_type" id="player-ctype-1" value="Individual (one-on-one)" required><label class="form-check-label" for="player-ctype-1">Individual (one-on-one)</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_type" id="player-ctype-2" value="Small group" required><label class="form-check-label" for="player-ctype-2">Small group</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_type" id="player-ctype-3" value="Full team" required><label class="form-check-label" for="player-ctype-3">Full team</label></div>
                 </div>
 
                 <!-- 8. Travel willingness -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">8. Are you willing to travel for in-person sessions?</label>
-                    {% for travel in [
-                        "Yes, up to 10 miles","Yes, up to 25 miles","Yes, up to 50 miles","No, sessions must be local only"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="travel_willingness" id="player-travel-{{loop.index}}" value="{{travel}}" required>
-                        <label class="form-check-label" for="player-travel-{{loop.index}}">{{travel}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_willingness" id="player-travel-1" value="Yes, up to 10 miles" required><label class="form-check-label" for="player-travel-1">Yes, up to 10 miles</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_willingness" id="player-travel-2" value="Yes, up to 25 miles" required><label class="form-check-label" for="player-travel-2">Yes, up to 25 miles</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_willingness" id="player-travel-3" value="Yes, up to 50 miles" required><label class="form-check-label" for="player-travel-3">Yes, up to 50 miles</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="travel_willingness" id="player-travel-4" value="No, sessions must be local only" required><label class="form-check-label" for="player-travel-4">No, sessions must be local only</label></div>
                 </div>
 
                 <!-- 9. Price range -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">9. What is your preferred price range per session?</label>
-                    {% for price in [
-                        "Under $30","$30–$60","$61–$100","Over $100","No preference"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="price_range" id="player-price-{{loop.index}}" value="{{price}}" required>
-                        <label class="form-check-label" for="player-price-{{loop.index}}">{{price}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="player-price-1" value="Under $30" required><label class="form-check-label" for="player-price-1">Under $30</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="player-price-2" value="$30–$60" required><label class="form-check-label" for="player-price-2">$30–$60</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="player-price-3" value="$61–$100" required><label class="form-check-label" for="player-price-3">$61–$100</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="player-price-4" value="Over $100" required><label class="form-check-label" for="player-price-4">Over $100</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="price_range" id="player-price-5" value="No preference" required><label class="form-check-label" for="player-price-5">No preference</label></div>
                 </div>
 
                 <!-- 10. Coaching format -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">10. What type of coaching format do you prefer?</label>
-                    {% for fmt in [
-                        "In-person","Online (virtual)","Hybrid (both in-person and online)"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="coaching_format" id="player-fmt-{{loop.index}}" value="{{fmt}}" required>
-                        <label class="form-check-label" for="player-fmt-{{loop.index}}">{{fmt}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_format" id="player-fmt-1" value="In-person" required><label class="form-check-label" for="player-fmt-1">In-person</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_format" id="player-fmt-2" value="Online (virtual)" required><label class="form-check-label" for="player-fmt-2">Online (virtual)</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="coaching_format" id="player-fmt-3" value="Hybrid (both in-person and online)" required><label class="form-check-label" for="player-fmt-3">Hybrid (both in-person and online)</label></div>
                 </div>
 
                 <!-- 11. Safety certifications requirement -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">11. Do you require your coach to have safety certifications?</label>
-                    {% for req in [
-                        "Yes, safety certifications are required","Preferred but not required","Not important to me"
-                    ] %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="safety_requirement" id="player-safety-{{loop.index}}" value="{{req}}" required>
-                        <label class="form-check-label" for="player-safety-{{loop.index}}">{{req}}</label>
-                    </div>
-                    {% endfor %}
+                    <div class="form-check"><input class="form-check-input" type="radio" name="safety_requirement" id="player-safety-1" value="Yes, safety certifications are required" required><label class="form-check-label" for="player-safety-1">Yes, safety certifications are required</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="safety_requirement" id="player-safety-2" value="Preferred but not required" required><label class="form-check-label" for="player-safety-2">Preferred but not required</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="safety_requirement" id="player-safety-3" value="Not important to me" required><label class="form-check-label" for="player-safety-3">Not important to me</label></div>
                 </div>
 
                 <!-- 12. US States -->
                 <div class="mb-3">
                     <label class="form-label fw-bold">12. In which state(s) are you available to take coaching? (Select all that apply)</label>
                     <div class="row">
-                        {% set states = [
-                            "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
-                            "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
-                            "Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota",
-                            "Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey",
-                            "New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon",
-                            "Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas",
-                            "Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming","Washington D.C."
-                        ] %}
-                        {% for state in states %}
-                        <div class="col-md-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="states" id="player-state-{{loop.index}}" value="{{state}}">
-                                <label class="form-check-label" for="player-state-{{loop.index}}">{{state}}</label>
-                            </div>
-                        </div>
-                        {% endfor %}
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-1" value="Alabama"><label class="form-check-label" for="player-state-1">Alabama</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-2" value="Alaska"><label class="form-check-label" for="player-state-2">Alaska</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-3" value="Arizona"><label class="form-check-label" for="player-state-3">Arizona</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-4" value="Arkansas"><label class="form-check-label" for="player-state-4">Arkansas</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-5" value="California"><label class="form-check-label" for="player-state-5">California</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-6" value="Colorado"><label class="form-check-label" for="player-state-6">Colorado</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-7" value="Connecticut"><label class="form-check-label" for="player-state-7">Connecticut</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-8" value="Delaware"><label class="form-check-label" for="player-state-8">Delaware</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-9" value="Florida"><label class="form-check-label" for="player-state-9">Florida</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-10" value="Georgia"><label class="form-check-label" for="player-state-10">Georgia</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-11" value="Hawaii"><label class="form-check-label" for="player-state-11">Hawaii</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-12" value="Idaho"><label class="form-check-label" for="player-state-12">Idaho</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-13" value="Illinois"><label class="form-check-label" for="player-state-13">Illinois</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-14" value="Indiana"><label class="form-check-label" for="player-state-14">Indiana</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-15" value="Iowa"><label class="form-check-label" for="player-state-15">Iowa</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-16" value="Kansas"><label class="form-check-label" for="player-state-16">Kansas</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-17" value="Kentucky"><label class="form-check-label" for="player-state-17">Kentucky</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-18" value="Louisiana"><label class="form-check-label" for="player-state-18">Louisiana</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-19" value="Maine"><label class="form-check-label" for="player-state-19">Maine</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-20" value="Maryland"><label class="form-check-label" for="player-state-20">Maryland</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-21" value="Massachusetts"><label class="form-check-label" for="player-state-21">Massachusetts</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-22" value="Michigan"><label class="form-check-label" for="player-state-22">Michigan</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-23" value="Minnesota"><label class="form-check-label" for="player-state-23">Minnesota</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-24" value="Mississippi"><label class="form-check-label" for="player-state-24">Mississippi</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-25" value="Missouri"><label class="form-check-label" for="player-state-25">Missouri</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-26" value="Montana"><label class="form-check-label" for="player-state-26">Montana</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-27" value="Nebraska"><label class="form-check-label" for="player-state-27">Nebraska</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-28" value="Nevada"><label class="form-check-label" for="player-state-28">Nevada</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-29" value="New Hampshire"><label class="form-check-label" for="player-state-29">New Hampshire</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-30" value="New Jersey"><label class="form-check-label" for="player-state-30">New Jersey</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-31" value="New Mexico"><label class="form-check-label" for="player-state-31">New Mexico</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-32" value="New York"><label class="form-check-label" for="player-state-32">New York</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-33" value="North Carolina"><label class="form-check-label" for="player-state-33">North Carolina</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-34" value="North Dakota"><label class="form-check-label" for="player-state-34">North Dakota</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-35" value="Ohio"><label class="form-check-label" for="player-state-35">Ohio</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-36" value="Oklahoma"><label class="form-check-label" for="player-state-36">Oklahoma</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-37" value="Oregon"><label class="form-check-label" for="player-state-37">Oregon</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-38" value="Pennsylvania"><label class="form-check-label" for="player-state-38">Pennsylvania</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-39" value="Rhode Island"><label class="form-check-label" for="player-state-39">Rhode Island</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-40" value="South Carolina"><label class="form-check-label" for="player-state-40">South Carolina</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-41" value="South Dakota"><label class="form-check-label" for="player-state-41">South Dakota</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-42" value="Tennessee"><label class="form-check-label" for="player-state-42">Tennessee</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-43" value="Texas"><label class="form-check-label" for="player-state-43">Texas</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-44" value="Utah"><label class="form-check-label" for="player-state-44">Utah</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-45" value="Vermont"><label class="form-check-label" for="player-state-45">Vermont</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-46" value="Virginia"><label class="form-check-label" for="player-state-46">Virginia</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-47" value="Washington"><label class="form-check-label" for="player-state-47">Washington</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-48" value="West Virginia"><label class="form-check-label" for="player-state-48">West Virginia</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-49" value="Wisconsin"><label class="form-check-label" for="player-state-49">Wisconsin</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-50" value="Wyoming"><label class="form-check-label" for="player-state-50">Wyoming</label></div></div>
+                        <div class="col-md-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="states" id="player-state-51" value="Washington D.C."><label class="form-check-label" for="player-state-51">Washington D.C.</label></div></div>
                     </div>
                 </div>
 
                 <input type="hidden" name="form_type" value="player">
-                <button type="submit" class="btn btn-success mt-3">Submit Player Form</button>
+                <button type="button" class="btn btn-success mt-3" onclick="showThankYou('playerFormResult','playerForm')">Submit Player Form</button>
                 <div id="playerFormResult" class="mt-4"></div>
             </form>
         </div>
@@ -467,8 +446,6 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- JQuery for AJAX -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 function showForm(formType) {
     document.getElementById('formTypeSelection').style.display = 'none';
@@ -493,64 +470,21 @@ function showFormSelection() {
     document.getElementById('playerFormResult').innerHTML = '';
 }
 
-function handleFormSubmit(formId, resultId) {
-    $(`#${formId}`).submit(function(event){
-        event.preventDefault();
-        var formData = $(this).serializeArray();
-        var data = {};
-        // Support multiple values for checkboxes
-        formData.forEach(function(x) {
-            if (data[x.name]) {
-                if(Array.isArray(data[x.name])) {
-                    data[x.name].push(x.value);
-                } else {
-                    data[x.name] = [data[x.name], x.value];
-                }
-            } else {
-                data[x.name] = x.value;
-            }
-        });
-        
-        // Handle "Other" fields
-        if (formId === 'coachForm') {
-            if($("#coach-outcome-other").is(":checked")) {
-                if(data["other_outcome"] && data["other_outcome"].trim() !== "") {
-                    if(!data["outcomes"]) data["outcomes"] = [];
-                    else if(typeof data["outcomes"] === "string") data["outcomes"] = [data["outcomes"]];
-                    data["outcomes"].push(data["other_outcome"]);
-                }
-            }
-            delete data["other_outcome"];
-        } else if (formId === 'playerForm') {
-            if($("#player-goal-other").is(":checked")) {
-                if(data["other_goal"] && data["other_goal"].trim() !== "") {
-                    if(!data["goals"]) data["goals"] = [];
-                    else if(typeof data["goals"] === "string") data["goals"] = [data["goals"]];
-                    data["goals"].push(data["other_goal"]);
-                }
-            }
-            delete data["other_goal"];
-        }
-        
-        $.post("/submit", data, function(response){
-            if(response.success){
-                $(`#${resultId}`).html(
-                    `<div class="alert alert-success">Thank you! Your response has been recorded.</div>`
-                );
-                $(`#${formId}`)[0].reset();
-            } else {
-                $(`#${resultId}`).html(
-                    `<div class="alert alert-danger">Error saving response. Please try again.</div>`
-                );
-            }
-        });
-    });
+function showThankYou(resultId, formId) {
+    document.getElementById(resultId).innerHTML = `<div class="alert alert-success">Thank you! Your response has been recorded (not saved anywhere).</div>`;
+    document.getElementById(formId).reset();
 }
 
-// Initialize form handlers
-$(document).ready(function() {
-    handleFormSubmit('coachForm', 'coachFormResult');
-    handleFormSubmit('playerForm', 'playerFormResult');
+// Prevent default form submission (no backend)
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('coachForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        showThankYou('coachFormResult','coachForm');
+    });
+    document.getElementById('playerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        showThankYou('playerFormResult','playerForm');
+    });
 });
 </script>
 </body>
