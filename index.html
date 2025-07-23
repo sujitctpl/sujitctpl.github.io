@@ -2,911 +2,556 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sujit Soni - Software Developer</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #64748b;
-            --accent-color: #f8fafc;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            overflow-x: hidden;
-        }
-        
-        .hero-section {
-            background: var(--gradient-bg);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-        }
-        
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            font-weight: 600;
-            margin: 0 auto 2rem;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #e2e8f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-        
-        .btn-custom {
-            padding: 12px 30px;
-            font-weight: 600;
-            border-radius: 50px;
-            border: none;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin: 0 10px;
-        }
-        
-        .btn-primary-custom {
-            background: white;
-            color: var(--primary-color);
-        }
-        
-        .btn-primary-custom:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-            color: var(--primary-color);
-        }
-        
-        .btn-outline-custom {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-outline-custom:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-        
-        .section-padding {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-bg);
-            border-radius: 2px;
-        }
-        
-        .card-custom {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .card-custom:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-        }
-        
-        .skill-item {
-            background: var(--accent-color);
-            padding: 15px 25px;
-            border-radius: 50px;
-            margin: 5px;
-            display: inline-block;
-            font-weight: 500;
-            color: var(--text-primary);
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .skill-item:hover {
-            border-color: var(--primary-color);
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-        }
-        
-        .project-header {
-            background: var(--gradient-bg);
-            color: white;
-            padding: 20px;
-        }
-        
-        .contact-info {
-            background: var(--accent-color);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-        }
-        
-        .contact-item {
-            margin: 15px 0;
-            font-size: 1.1rem;
-        }
-        
-        .contact-item i {
-            color: var(--primary-color);
-            margin-right: 10px;
-            width: 20px;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--primary-color);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-            padding-left: 40px;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 0;
-            width: 14px;
-            height: 14px;
-            background: var(--primary-color);
-            border-radius: 50%;
-        }
-        
-        .certification-badge {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin: 5px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .certification-badge:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-            color: white;
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-        
-        .navbar {
-            transition: all 0.3s ease;
-            padding: 15px 0;
-        }
-        
-        .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
-        
-        .nav-link {
-            font-weight: 500;
-            color: var(--text-primary) !important;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--primary-color) !important;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .profile-img {
-                width: 150px;
-                height: 150px;
-                font-size: 3rem;
-            }
-            
-            .section-padding {
-                padding: 50px 0;
-            }
-        }
-        
-        .floating-shapes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-        
-        .shape {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .shape:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-        
-        .shape:nth-child(2) {
-            top: 20%;
-            right: 10%;
-            animation-delay: 2s;
-        }
-        
-        .shape:nth-child(3) {
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-        
-        .progress-bar-custom {
-            background: var(--gradient-bg);
-            height: 8px;
-            border-radius: 4px;
-        }
-    </style>
+    <title>Football Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS & JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Sujit Soni</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="floating-shapes">
-            <div class="shape">
-                <i class="fas fa-code fa-3x"></i>
-            </div>
-            <div class="shape">
-                <i class="fas fa-laptop-code fa-3x"></i>
-            </div>
-            <div class="shape">
-                <i class="fas fa-robot fa-3x"></i>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12 text-center hero-content">
-                    <div class="profile-img">SS</div>
-                    <h1 class="hero-title">Sujit Soni</h1>
-                    <p class="hero-subtitle">Enthusiast Developer & AI/ML Aspirant</p>
-                    <p class="lead mb-4">Passionate computer science student seeking AI/ML roles for skill enhancement and growth through challenging real-time projects.</p>
-                    <div class="mt-4">
-                        <a href="#contact" class="btn btn-custom btn-primary-custom">Get In Touch</a>
-                        <a href="#projects" class="btn btn-custom btn-outline-custom">View My Work</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <p class="lead">As a developer, I aim to sharpen my skills in programming, problem-solving, communication, and team handling for my professional growth. I'm passionate about creating innovative solutions and contributing to meaningful projects that make a difference.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card card-custom">
-                        <div class="card-body text-center">
-                            <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Programming Languages</h5>
-                            <div class="mt-3">
-                                <span class="skill-item">Python</span>
-                                <span class="skill-item">JavaScript</span>
-                                <span class="skill-item">SQL</span>
-                                <span class="skill-item">Java</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card card-custom">
-                        <div class="card-body text-center">
-                            <i class="fas fa-tools fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Technologies & Frameworks</h5>
-                            <div class="mt-3">
-                                <span class="skill-item">AI/ML</span>
-                                <span class="skill-item">Django</span>
-                                <span class="skill-item">React</span>
-                                <span class="skill-item">Git</span>
-                                <span class="skill-item">GitHub</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card card-custom">
-                        <div class="card-body text-center">
-                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Soft Skills</h5>
-                            <div class="mt-3">
-                                <span class="skill-item">Communication</span>
-                                <span class="skill-item">Teamwork</span>
-                                <span class="skill-item">Adaptability</span>
-                                <span class="skill-item">Problem-solving</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h5 class="mb-0"><i class="fas fa-dumbbell me-2"></i>Fithub - Gym Website</h5>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Dynamic gym website using Django and Python, integrated with React via APIs. Features CRUD operations for members, trainers, memberships and workout classes.</p>
-                            <div class="mb-3">
-                                <small class="text-muted">
-                                    <strong>Tech Stack:</strong> Python, Django, React.js, HTML, Database
-                                </small>
-                            </div>
-                            <a href="#" class="btn btn-primary btn-sm">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h5 class="mb-0"><i class="fas fa-film me-2"></i>Movie Recommender System</h5>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Built using Python, Pandas, and scikit-learn. Merged and cleaned Kaggle movie data, computed cosine similarity via CountVectorizer with Streamlit deployment.</p>
-                            <div class="mb-3">
-                                <small class="text-muted">
-                                    <strong>Tech Stack:</strong> TMDB API, scikit-learn, Pandas, NumPy, Matplotlib, Streamlit
-                                </small>
-                            </div>
-                            <a href="#" class="btn btn-primary btn-sm">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h5 class="mb-0"><i class="fas fa-shield-alt me-2"></i>Spam Email/SMS Detector</h5>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Spam detection system using Python, Pandas, and NLTK. Features text preprocessing, TfidfVectorizer, and fine-tuned classifiers deployed via Streamlit.</p>
-                            <div class="mb-3">
-                                <small class="text-muted">
-                                    <strong>Tech Stack:</strong> Kaggle API, NLTK, scikit-learn, Pandas, Seaborn, Streamlit
-                                </small>
-                            </div>
-                            <a href="#" class="btn btn-primary btn-sm">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="card card-custom">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h5 class="card-title text-primary">Software Engineer Intern</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">BMV System Integration | Vastrapur, Ahmedabad</h6>
-                                </div>
-                                <span class="badge bg-primary">Nov 2024 - Feb 2025</span>
-                            </div>
-                            <div class="mb-3">
-                                <p><strong>Live Project Experience:</strong></p>
-                                <ul>
-                                    <li>Successfully implemented web scraping of Cryptorank website using Selenium, extracting data for ~8,000 cryptocurrencies</li>
-                                    <li>Completed Google Apps Script automation projects for Gmail, Sheets, and Docs using APIs</li>
-                                    <li>Collaborated with experienced developers to develop, debug and deploy software updates</li>
-                                    <li>Adapted projects to meet client requirements, enhancing satisfaction and usability</li>
-                                </ul>
-                            </div>
-                            <p><strong>Technologies:</strong> Python, Django, React.js, Database, HTML, Google Apps Script</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card card-custom">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h5 class="card-title">B.Tech in Computer Science Engineering</h5>
-                                    <h6 class="card-subtitle text-muted">LJ University, Ahmedabad</h6>
-                                </div>
-                                <span class="badge bg-primary">2022 - 2026</span>
-                            </div>
-                            <p class="card-text">Expected graduation with strong academic performance</p>
-                            <div class="progress mb-2">
-                                <div class="progress-bar progress-bar-custom" style="width: 78%"></div>
-                            </div>
-                            <small class="text-muted">Average SPI: 7.81/10</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card card-custom">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h5 class="card-title">Higher Secondary Education</h5>
-                                    <h6 class="card-subtitle text-muted">Swaminarayan English School</h6>
-                                </div>
-                                <span class="badge bg-primary">2008 - 2022</span>
-                            </div>
-                            <div class="mb-2">
-                                <p class="mb-1"><strong>12th Science:</strong></p>
-                                <div class="progress mb-2">
-                                    <div class="progress-bar progress-bar-custom" style="width: 81.5%"></div>
-                                </div>
-                                <small class="text-muted">81.51%</small>
-                            </div>
-                            <div>
-                                <p class="mb-1"><strong>10th Grade:</strong></p>
-                                <div class="progress mb-2">
-                                    <div class="progress-bar progress-bar-custom" style="width: 96.8%"></div>
-                                </div>
-                                <small class="text-muted">96.82%</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body class="bg-light">
+<div class="container mt-5 mb-5">
+    <div class="card shadow">
+        <div class="card-body">
+            <h2 class="mb-4">Football Questionnaire</h2>
             
-            <!-- Certifications -->
-            <div class="mt-5">
-                <h3 class="text-center mb-4">Certifications</h3>
-                <div class="text-center">
-                    <a href="#" class="certification-badge">Exploratory Data Analysis for ML - IBM (July 2024)</a>
-                    <a href="#" class="certification-badge">HTML, CSS & JavaScript - Johns Hopkins (Feb 2024)</a>
-                    <a href="#" class="certification-badge">Java Data Structures - University of Pennsylvania (Aug 2023)</a>
-                    <a href="#" class="certification-badge">Introduction to Java - LearnQuest (Feb 2023)</a>
+            <!-- Form Type Selection -->
+            <div id="formTypeSelection" class="mb-4">
+                <h4 class="mb-3">Please select the type of questionnaire:</h4>
+                <div class="d-grid gap-2 d-md-block">
+                    <button type="button" class="btn btn-primary btn-lg me-3" onclick="showForm('coach')">Coach Questionnaire</button>
+                    <button type="button" class="btn btn-success btn-lg" onclick="showForm('player')">Player Questionnaire</button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="contact-info">
-                        <h4 class="mb-4">Let's Connect!</h4>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:sujitsoni5026@gmail.com" class="text-decoration-none">sujitsoni5026@gmail.com</a>
+            <!-- Coach Form -->
+            <form id="coachForm" style="display: none;">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="text-primary">Coach Questionnaire</h3>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showFormSelection()">← Back to Selection</button>
+                </div>
+
+                <!-- 1. Positions -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">1. Which position(s) do you coach?</label>
+                    <div class="row">
+                        {% for pos in [
+                            "Quarterback","Running Back","Wide Receiver","Tight End",
+                            "Offensive Line","Defensive Line","Linebacker","Cornerback",
+                            "Safety","Kicker/Punter (Special Teams)","Long Snapper"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="positions" id="coach-pos-{{loop.index}}" value="{{pos}}">
+                                <label class="form-check-label" for="coach-pos-{{loop.index}}">{{pos}}</label>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+919157709030" class="text-decoration-none">+91 9157709030</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 2. Skill areas -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">2. Which skill areas do you specialize in coaching?</label>
+                    <div class="row">
+                        {% for skill in [
+                            "Speed & Agility","Strength & Conditioning","Fundamentals (Tackling, Blocking, etc.)","Footwork",
+                            "Passing/Throwing","Catching","Route Running","Defensive Techniques",
+                            "Game IQ/Strategy","Position-Specific Skills","Injury Prevention","Mental Preparation"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="skills" id="coach-skill-{{loop.index}}" value="{{skill}}">
+                                <label class="form-check-label" for="coach-skill-{{loop.index}}">{{skill}}</label>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            New Ranip, Ahmedabad, Gujarat
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 3. Coaching style (single) -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">3. How would you describe your coaching style?</label>
+                    {% for style in [
+                        "Supportive and encouraging",
+                        "Motivational and challenging",
+                        "Detailed and technical instruction",
+                        "Structured and disciplined",
+                        "Flexible and adaptive"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="coaching_style" id="coach-style-{{loop.index}}" value="{{style}}" required>
+                        <label class="form-check-label" for="coach-style-{{loop.index}}">{{style}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 4. Age groups -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">4. Which age group(s) do you coach?</label>
+                    <div class="row">
+                        {% for age in [
+                            "Under 10","10–12","13–15","16–18","19–22","23 and older"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="age_groups" id="coach-age-{{loop.index}}" value="{{age}}">
+                                <label class="form-check-label" for="coach-age-{{loop.index}}">{{age}}</label>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com/in/sujit-soni-8073a1306" target="_blank" class="text-decoration-none">LinkedIn Profile</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 5. Experience level -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">5. Which player experience level(s) do you coach?</label>
+                    <div class="row">
+                        {% for level in [
+                            "Beginner (new to the sport)","Recreational (casual/league play)","School/Club Team",
+                            "Varsity/College","Competitive/Elite"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="experience_levels" id="coach-level-{{loop.index}}" value="{{level}}">
+                                <label class="form-check-label" for="coach-level-{{loop.index}}">{{level}}</label>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/sujitsoni3804" target="_blank" class="text-decoration-none">GitHub Profile</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 6. Outcomes -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">6. What coaching outcomes do you help athletes achieve?</label>
+                    <div class="row">
+                        {% for outcome in [
+                            "Improve basic skills","Prepare for tryouts","Get recruited for college",
+                            "Enhance physical fitness","Recover from injury","Build confidence",
+                            "Compete at a higher level"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-{{loop.index}}" value="{{outcome}}">
+                                <label class="form-check-label" for="coach-outcome-{{loop.index}}">{{outcome}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="outcomes" id="coach-outcome-other">
+                                <label class="form-check-label" for="coach-outcome-other">Other:</label>
+                                <input type="text" class="form-control mt-1" name="other_outcome" placeholder="Specify other" style="max-width: 90%;">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- 7. Coaching type -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">7. Do you offer individual or group/team coaching?</label>
+                    <div class="row">
+                        {% for ctype in [
+                            "Individual (one-on-one)","Small group","Full team"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="coaching_types" id="coach-ctype-{{loop.index}}" value="{{ctype}}">
+                                <label class="form-check-label" for="coach-ctype-{{loop.index}}">{{ctype}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 8. Travel distance -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">8. How far are you willing to travel for in-person sessions?</label>
+                    {% for dist in [
+                        "Up to 10 miles","Up to 25 miles","Up to 50 miles","Local only"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="travel_distance" id="coach-dist-{{loop.index}}" value="{{dist}}" required>
+                        <label class="form-check-label" for="coach-dist-{{loop.index}}">{{dist}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 9. Price range -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">9. What is your typical price range per session?</label>
+                    {% for price in [
+                        "Under $30","$30–$60","$61–$100","Over $100"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="price_range" id="coach-price-{{loop.index}}" value="{{price}}" required>
+                        <label class="form-check-label" for="coach-price-{{loop.index}}">{{price}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 10. Coaching format -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">10. What coaching format(s) do you offer?</label>
+                    <div class="row">
+                        {% for fmt in [
+                            "In-person","Online (virtual)","Hybrid (both in-person and online)"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="coaching_formats" id="coach-fmt-{{loop.index}}" value="{{fmt}}">
+                                <label class="form-check-label" for="coach-fmt-{{loop.index}}">{{fmt}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 11. Safety certifications -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">11. Do you hold current safety certifications? (Select all that apply)</label>
+                    <div class="row">
+                        {% for cert in [
+                            "CPR Certification","First Aid Certification","USA Football Heads Up Certification",
+                            "Concussion Protocol Training","Youth Protection Training","None of the above"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="safety_certs" id="coach-cert-{{loop.index}}" value="{{cert}}">
+                                <label class="form-check-label" for="coach-cert-{{loop.index}}">{{cert}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 12. US States -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">12. In which state(s) do you provide coaching services? (Select all that apply)</label>
+                    <div class="row">
+                        {% set states = [
+                            "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+                            "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
+                            "Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota",
+                            "Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey",
+                            "New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon",
+                            "Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas",
+                            "Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming","Washington D.C."
+                        ] %}
+                        {% for state in states %}
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="states" id="coach-state-{{loop.index}}" value="{{state}}">
+                                <label class="form-check-label" for="coach-state-{{loop.index}}">{{state}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <input type="hidden" name="form_type" value="coach">
+                <button type="submit" class="btn btn-primary mt-3">Submit Coach Form</button>
+                <div id="coachFormResult" class="mt-4"></div>
+            </form>
+
+            <!-- Player Form -->
+            <form id="playerForm" style="display: none;">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="text-success">Player Questionnaire</h3>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showFormSelection()">← Back to Selection</button>
+                </div>
+
+                <!-- 1. Positions -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">1. Which position(s) do you want coaching for?</label>
+                    <div class="row">
+                        {% for pos in [
+                            "Quarterback","Running Back","Wide Receiver","Tight End",
+                            "Offensive Line","Defensive Line","Linebacker","Cornerback",
+                            "Safety","Kicker/Punter (Special Teams)","Long Snapper"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="positions" id="player-pos-{{loop.index}}" value="{{pos}}">
+                                <label class="form-check-label" for="player-pos-{{loop.index}}">{{pos}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 2. Skill areas -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">2. Which skill areas do you want to focus on?</label>
+                    <div class="row">
+                        {% for skill in [
+                            "Speed & Agility","Strength & Conditioning","Fundamentals (Tackling, Blocking, etc.)","Footwork",
+                            "Passing/Throwing","Catching","Route Running","Defensive Techniques",
+                            "Game IQ/Strategy","Position-Specific Skills","Injury Prevention","Mental Preparation"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="skills" id="player-skill-{{loop.index}}" value="{{skill}}">
+                                <label class="form-check-label" for="player-skill-{{loop.index}}">{{skill}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- 3. Coaching style (single) -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">3. What coaching style works best for you?</label>
+                    {% for style in [
+                        "Supportive and encouraging",
+                        "Motivational and challenging",
+                        "Detailed and technical instruction",
+                        "Structured and disciplined",
+                        "Flexible and adaptive",
+                        "Not sure"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="coaching_style" id="player-style-{{loop.index}}" value="{{style}}" required>
+                        <label class="form-check-label" for="player-style-{{loop.index}}">{{style}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 4. Age group -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">4. What is your age group?</label>
+                    {% for age in [
+                        "Under 10","10–12","13–15","16–18","19–22","23 and older"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="age_group" id="player-age-{{loop.index}}" value="{{age}}" required>
+                        <label class="form-check-label" for="player-age-{{loop.index}}">{{age}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 5. Experience level -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">5. What is your current experience level in football?</label>
+                    {% for level in [
+                        "Beginner (new to the sport)","Recreational (casual/league play)","School/Club Team",
+                        "Varsity/College","Competitive/Elite"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="experience_level" id="player-level-{{loop.index}}" value="{{level}}" required>
+                        <label class="form-check-label" for="player-level-{{loop.index}}">{{level}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 6. Goals -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">6. What are your main goals for coaching?</label>
+                    <div class="row">
+                        {% for goal in [
+                            "Improve basic skills","Prepare for tryouts","Get recruited for college",
+                            "Enhance physical fitness","Recover from injury","Build confidence",
+                            "Compete at a higher level"
+                        ] %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="goals" id="player-goal-{{loop.index}}" value="{{goal}}">
+                                <label class="form-check-label" for="player-goal-{{loop.index}}">{{goal}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="goals" id="player-goal-other">
+                                <label class="form-check-label" for="player-goal-other">Other:</label>
+                                <input type="text" class="form-control mt-1" name="other_goal" placeholder="Specify other" style="max-width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Coaching type -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">7. Are you looking for individual or group/team coaching?</label>
+                    {% for ctype in [
+                        "Individual (one-on-one)","Small group","Full team"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="coaching_type" id="player-ctype-{{loop.index}}" value="{{ctype}}" required>
+                        <label class="form-check-label" for="player-ctype-{{loop.index}}">{{ctype}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 8. Travel willingness -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">8. Are you willing to travel for in-person sessions?</label>
+                    {% for travel in [
+                        "Yes, up to 10 miles","Yes, up to 25 miles","Yes, up to 50 miles","No, sessions must be local only"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="travel_willingness" id="player-travel-{{loop.index}}" value="{{travel}}" required>
+                        <label class="form-check-label" for="player-travel-{{loop.index}}">{{travel}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 9. Price range -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">9. What is your preferred price range per session?</label>
+                    {% for price in [
+                        "Under $30","$30–$60","$61–$100","Over $100","No preference"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="price_range" id="player-price-{{loop.index}}" value="{{price}}" required>
+                        <label class="form-check-label" for="player-price-{{loop.index}}">{{price}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 10. Coaching format -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">10. What type of coaching format do you prefer?</label>
+                    {% for fmt in [
+                        "In-person","Online (virtual)","Hybrid (both in-person and online)"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="coaching_format" id="player-fmt-{{loop.index}}" value="{{fmt}}" required>
+                        <label class="form-check-label" for="player-fmt-{{loop.index}}">{{fmt}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 11. Safety certifications requirement -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">11. Do you require your coach to have safety certifications?</label>
+                    {% for req in [
+                        "Yes, safety certifications are required","Preferred but not required","Not important to me"
+                    ] %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="safety_requirement" id="player-safety-{{loop.index}}" value="{{req}}" required>
+                        <label class="form-check-label" for="player-safety-{{loop.index}}">{{req}}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 12. US States -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">12. In which state(s) are you available to take coaching? (Select all that apply)</label>
+                    <div class="row">
+                        {% set states = [
+                            "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+                            "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
+                            "Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota",
+                            "Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey",
+                            "New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon",
+                            "Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas",
+                            "Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming","Washington D.C."
+                        ] %}
+                        {% for state in states %}
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="states" id="player-state-{{loop.index}}" value="{{state}}">
+                                <label class="form-check-label" for="player-state-{{loop.index}}">{{state}}</label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <input type="hidden" name="form_type" value="player">
+                <button type="submit" class="btn btn-success mt-3">Submit Player Form</button>
+                <div id="playerFormResult" class="mt-4"></div>
+            </form>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Sujit Soni. All rights reserved. | Built with ❤️ and Bootstrap</p>
-        </div>
-    </footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JQuery for AJAX -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+function showForm(formType) {
+    document.getElementById('formTypeSelection').style.display = 'none';
+    if (formType === 'coach') {
+        document.getElementById('coachForm').style.display = 'block';
+        document.getElementById('playerForm').style.display = 'none';
+    } else {
+        document.getElementById('playerForm').style.display = 'block';
+        document.getElementById('coachForm').style.display = 'none';
+    }
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+function showFormSelection() {
+    document.getElementById('formTypeSelection').style.display = 'block';
+    document.getElementById('coachForm').style.display = 'none';
+    document.getElementById('playerForm').style.display = 'none';
+    // Reset forms
+    document.getElementById('coachForm').reset();
+    document.getElementById('playerForm').reset();
+    // Clear results
+    document.getElementById('coachFormResult').innerHTML = '';
+    document.getElementById('playerFormResult').innerHTML = '';
+}
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all cards for animation
-        document.querySelectorAll('.card-custom, .project-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Add typing effect to hero title
-        const heroTitle = document.querySelector('.hero-title');
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                heroTitle.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        };
-        
-        // Start typing effect after page load
-        window.addEventListener('load', () => {
-            setTimeout(typeWriter, 1000);
-        });
-
-        // Add hover effect to skill items
-        document.querySelectorAll('.skill-item').forEach(skill => {
-            skill.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.1) translateY(-5px)';
-            });
-            
-            skill.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1) translateY(0)';
-            });
-        });
-
-        // Progressive skill bar animation
-        const animateProgressBars = () => {
-            const progressBars = document.querySelectorAll('.progress-bar-custom');
-            progressBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                    bar.style.transition = 'width 2s ease-in-out';
-                }, 200);
-            });
-        };
-
-        // Trigger progress bar animation when education section is visible
-        const educationSection = document.getElementById('education');
-        const educationObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateProgressBars();
-                    educationObserver.unobserve(entry.target);
-                }
-            });
-        });
-        
-        if (educationSection) {
-            educationObserver.observe(educationSection);
-        }
-
-        // Add particle effect to hero section
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.style.cssText = `
-                position: absolute;
-                width: 4px;
-                height: 4px;
-                background: rgba(255, 255, 255, 0.5);
-                border-radius: 50%;
-                pointer-events: none;
-                animation: particleFloat 4s linear infinite;
-            `;
-            
-            const x = Math.random() * window.innerWidth;
-            particle.style.left = x + 'px';
-            particle.style.top = '100vh';
-            
-            document.querySelector('.hero-section').appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-            }, 4000);
-        }
-
-        // Create particles periodically
-        setInterval(createParticle, 300);
-
-        // Add CSS for particle animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes particleFloat {
-                0% {
-                    transform: translateY(0) rotate(0deg);
-                    opacity: 0;
-                }
-                10% {
-                    opacity: 1;
-                }
-                90% {
-                    opacity: 1;
-                }
-                100% {
-                    transform: translateY(-100vh) rotate(360deg);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Add counter animation for stats (if needed in future)
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    element.textContent = target;
-                    clearInterval(timer);
+function handleFormSubmit(formId, resultId) {
+    $(`#${formId}`).submit(function(event){
+        event.preventDefault();
+        var formData = $(this).serializeArray();
+        var data = {};
+        // Support multiple values for checkboxes
+        formData.forEach(function(x) {
+            if (data[x.name]) {
+                if(Array.isArray(data[x.name])) {
+                    data[x.name].push(x.value);
                 } else {
-                    element.textContent = Math.floor(start);
+                    data[x.name] = [data[x.name], x.value];
                 }
-            }, 16);
-        }
-
-        // Enhanced mobile menu handling
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
+            } else {
+                data[x.name] = x.value;
+            }
+        });
         
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarToggler.click();
+        // Handle "Other" fields
+        if (formId === 'coachForm') {
+            if($("#coach-outcome-other").is(":checked")) {
+                if(data["other_outcome"] && data["other_outcome"].trim() !== "") {
+                    if(!data["outcomes"]) data["outcomes"] = [];
+                    else if(typeof data["outcomes"] === "string") data["outcomes"] = [data["outcomes"]];
+                    data["outcomes"].push(data["other_outcome"]);
                 }
-            });
-        });
-
-        // Add scroll indicator
-        const scrollIndicator = document.createElement('div');
-        scrollIndicator.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 4px;
-            background: linear-gradient(to right, #667eea, #764ba2);
-            z-index: 9999;
-            transition: width 0.3s ease;
-        `;
-        document.body.appendChild(scrollIndicator);
-
-        window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (scrollTop / scrollHeight) * 100;
-            scrollIndicator.style.width = scrollPercent + '%';
-        });
-
-        // Form submission handling (if contact form is added later)
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            // Add form handling logic here
-            alert('Thank you for your message! I\'ll get back to you soon.');
+            }
+            delete data["other_outcome"];
+        } else if (formId === 'playerForm') {
+            if($("#player-goal-other").is(":checked")) {
+                if(data["other_goal"] && data["other_goal"].trim() !== "") {
+                    if(!data["goals"]) data["goals"] = [];
+                    else if(typeof data["goals"] === "string") data["goals"] = [data["goals"]];
+                    data["goals"].push(data["other_goal"]);
+                }
+            }
+            delete data["other_goal"];
         }
-
-        // Initialize all animations and effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add entrance animations
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-                document.body.style.transform = 'translateY(0)';
-            }, 100);
+        
+        $.post("/submit", data, function(response){
+            if(response.success){
+                $(`#${resultId}`).html(
+                    `<div class="alert alert-success">Thank you! Your response has been recorded.</div>`
+                );
+                $(`#${formId}`)[0].reset();
+            } else {
+                $(`#${resultId}`).html(
+                    `<div class="alert alert-danger">Error saving response. Please try again.</div>`
+                );
+            }
         });
+    });
+}
 
-        // Performance optimization - lazy load images if any are added
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-    </script>
+// Initialize form handlers
+$(document).ready(function() {
+    handleFormSubmit('coachForm', 'coachFormResult');
+    handleFormSubmit('playerForm', 'playerFormResult');
+});
+</script>
 </body>
 </html>
